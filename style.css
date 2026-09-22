@@ -294,11 +294,14 @@ th, td {
     background-color: #ffffff;
     border: 1px solid #cbd5e1;
     border-left: 4px solid #059669;
-    padding: 0.6rem 1rem;
+    padding: 0.65rem 1rem;
     border-radius: 6px;
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: #1e293b;
+    display: flex; /* Layout Flexbox no item do carrinho */
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Lista de Destaques */
