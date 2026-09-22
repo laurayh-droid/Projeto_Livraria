@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastro e detalhes do livro Babel: Uma História Arcana de R. F. Kuang na Livraria Página Viva.">
+    <title>Livraria Página Viva - Babel (R. F. Kuang)</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal da Livraria (Etapa 1 & 2) -->
+    <header id="cabecalho-principal" class="header-principal">
+        <div class="header-container">
+            <div class="brand-container">
+                <img src="img/coruja-logo.jpg" alt="Logo Livraria Página Viva - Coruja" class="logo-img">
+                <h1 class="logo-livraria">Livraria Página Viva</h1>
+            </div>
+            <nav class="nav-principal" aria-label="Navegação Principal">
+                <ul class="nav-lista">
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Catálogo</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><span class="carrinho-badge-nav">🛒 (<span id="contador">0</span>)</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal da Página (Etapa 1 - Item 2) -->
+    <main class="conteudo-principal">
+        
+        <!-- Artigo do Livro no Catálogo (Babel, por R. F. Kuang) -->
+        <article class="card-livro">
+            <header class="livro-header">
+                <h2>Babel, ou A Necessidade de Violência</h2>
+                <p class="autor"><strong>Autor:</strong> R. F. Kuang</p>
+            </header>
+
+            <div class="livro-corpo">
+                <figure class="livro-capa-container">
+                    <img src="img/capa-livro.jpg" alt="Capa oficial do livro Babel de R. F. Kuang, exibindo a icônica torre gravada em preto e branco com tipografia clássica" class="capa-livro">
+                    <figcaption>Capa oficial da edição em língua portuguesa</figcaption>
+                </figure>
+
+                <div class="livro-informacoes">
+                    <p class="preco"><strong>Preço:</strong> R$ 69,90</p>
+
+                    <div class="livro-descricao">
+                        <h3>Sinopse e Descrição</h3>
+                        <p>
+                            Ambientado na Inglaterra vitoriana da década de 1830, <em>Babel, ou A Necessidade de Violência: Uma História Arcana da Revolução dos Tradutores de Oxford</em> acompanha Robin Swift, um órfão de Cantão resgatado por um misterioso tutor e levado para Londres. Treinado durante anos em latim, grego antigo e chinês, Robin finalmente ingressa no prestigiado Instituto Real de Tradução da Universidade de Oxford — popularmente conhecido como Babel —, o epicentro do conhecimento linguístico e do poder mágico do Império Britânico.
+                        </p>
+                        <p>
+                            Em Babel, a tradução é muito mais que uma disciplina acadêmica: é a base do trabalho com prata (*silver-working*). Ao gravar pares de palavras correspondentes em diferentes idiomas em barras de prata pura, os tradutores capturam o que inevitavelmente se "perde na tradução", gerando manifestações mágicas extraordinárias que alimentam os navios, a indústria e a hegemonia militar britânica. Contudo, quanto mais se aprofunda nos segredos do instituto, mais Robin percebe que sua paixão pelas línguas serve como motor direto para a exploração imperialista e a iminente Guerra do Opio contra sua terra natal.
+                        </p>
+                        <p>
+                            Confrontado com o dilema entre desfrutar dos privilégios de uma elite acadêmica e lutar contra a máquina colonial que o formou, Robin se une à clandestina Sociedade Hermes, um grupo revolucionário determinado a deter o avanço de Babel. Vencedor dos renomados prêmios Nebula e Locus, a obra-prima de R. F. Kuang é um romance envolvente e provocativo que examina a força da linguagem, o peso da violência e o verdadeiro custo da liberdade.
+                        </p>
+                    </div>
+
+                    <!-- Botão de Adicionar ao Carrinho -->
+                    <button type="button" id="btn-adicionar" class="btn-carrinho">Adicionar ao carrinho</button>
+
+                    <!-- Lista vazia do Carrinho (Etapa 5 - Item 1) -->
+                    <div class="carrinho-secao">
+                        <h4>Carrinho de Compras</h4>
+                        <ul id="carrinho" class="lista-carrinho"></ul>
+                    </div>
+
+                    <!-- Lista de Destaques (<ul>) -->
+                    <div class="livro-destaques">
+                        <h3>Destaques do Livro</h3>
+                        <ul>
+                            <li>Vencedor dos prêmios Nebula e Locus de Melhor Romance</li>
+                            <li>Edição com acabamento especial e pintura lateral</li>
+                            <li>Inclui mapa ilustrado de Oxford e diagrama da Torre de Babel</li>
+                            <li>Frete grátis para todo o Brasil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Formatos com CSS Grid (Etapa 3) -->
+            <section class="livro-formatos">
+                <h3>Formatos Disponíveis</h3>
+                
+                <!-- Grid de Cartões de Formato (CSS Grid - Etapa 3) -->
+                <div class="grid-formatos">
+                    <article class="card-formato">
+                        <h4>Físico (Edição Especial)</h4>
+                        <p class="formato-preco">R$ 69,90</p>
+                        <p class="formato-prazo">Prazo: 24h a 3 dias úteis</p>
+                        <span class="formato-badge">Capa Dura</span>
+                    </article>
+                    <article class="card-formato">
+                        <h4>E-book (Digital)</h4>
+                        <p class="formato-preco">R$ 39,90</p>
+                        <p class="formato-prazo">Prazo: Download imediato</p>
+                        <span class="formato-badge">PDF / EPUB / Kindle</span>
+                    </article>
+                    <article class="card-formato">
+                        <h4>Audiobook (Narração)</h4>
+                        <p class="formato-preco">R$ 44,90</p>
+                        <p class="formato-prazo">Prazo: Acesso imediato no App</p>
+                        <span class="formato-badge">Áudio HD</span>
+                    </article>
+                </div>
+
+                <h3>Tabela Comparativa de Formatos</h3>
+                <table class="tabela-formatos">
+                    <caption>Comparativo de formatos, preços e prazos de entrega</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Formato</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Prazo de Entrega</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Físico (Edição Especial)</td>
+                            <td>R$ 69,90</td>
+                            <td>24h a 3 dias úteis</td>
+                        </tr>
+                        <tr>
+                            <td>E-book (PDF / EPUB / Kindle)</td>
+                            <td>R$ 39,90</td>
+                            <td>Download imediato</td>
+                        </tr>
+                        <tr>
+                            <td>Audiobook (MP3 / App)</td>
+                            <td>R$ 44,90</td>
+                            <td>Acesso imediato</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+
+        <!-- Seção de Contato (Etapa 1 - Item 2 & Link Interno #contato) -->
+        <section id="contato" class="secao-contato">
+            <h2>Contato</h2>
+            <p>Dúvidas sobre o livro ou seu pedido? Fale com a nossa equipe de atendimento.</p>
+            <p><strong>E-mail de Suporte:</strong> <a href="mailto:contato@paginaviva.com.br">contato@paginaviva.com.br</a></p>
+            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 09h às 18h</p>
+        </section>
+
+    </main>
+
+    <!-- Rodapé da Página (Etapa 1 - Item 3) -->
+    <footer class="rodape-principal">
+        <p>&copy; 2026 Livraria Página Viva. Todos os direitos reservados.</p>
+        <p>Contato: <a href="mailto:contato@paginaviva.com.br">contato@paginaviva.com.br</a></p>
+    </footer>
+
+    <!-- 
+    ==================================================================================
+    JUSTIFICATIVA ESCRITA DOS ELEMENTOS SEMÂNTICOS UTILIZADOS
+    ==================================================================================
+    header:
+    O elemento <header> foi utilizado para representar o cabeçalho introdutório da página (com logo e navegação) e o cabeçalho do artigo. Ele é mais adequado do que uma <div> porque sinaliza semanticamente a região de topo e apresentação aos leitores de tela e motores de busca.
+
+    nav:
+    O elemento <nav> foi utilizado para envolver a lista de links de navegação principal. Ele é mais adequado do que uma <div> pois indica explicitamente um bloco de links de navegação do site, permitindo que tecnologias assistivas identifiquem a estrutura do menu de forma direta.
+
+    main:
+    O elemento <main> delimita o conteúdo principal e exclusivo da página, descartando elementos repetidos como menus globais e rodapés. Ele é superior a uma <div> genérica por permitir atalhos de acessibilidade e priorização do conteúdo central pelos buscadores.
+
+    article / section:
+    O elemento <article> foi escolhido para envelopar os detalhes do livro por se tratar de um conteúdo autônomo, completo e reutilizável independente do restante da página. Já as tags <section> foram usadas para agrupar blocos temáticos específicos (como a tabela comparativa e o setor de contato), sendo mais adequadas do que <div> por conferirem estrutura e propósito contextual explícito.
+
+    footer:
+    O elemento <footer> encerra a página contendo os direitos autorais e e-mail de contato. Ele substitui uma <div> genérica por definir claramente o rodapé do documento ou seção, auxiliando ferramentas de indexação e acessibilidade no reconhecimento de dados institucionais e de encerramento.
+    ==================================================================================
+    -->
+
+    <!-- Arquivo JavaScript vinculado ao final do body (Etapa 5) -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

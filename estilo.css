@@ -1,0 +1,603 @@
+/* ==================================================================================
+   LIVRARIA PÁGINA VIVA - ESTILO.CSS (HEADER COMPACTO E RESPONSIVIDADE)
+   ================================================================================== */
+
+/* Reset simples e configurações globais com unidades relativas (rem, %) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* Base 16px para cálculo de rem */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    line-height: 1.6;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 1rem;
+    color: #334155;
+    margin-bottom: 0.75rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+}
+
+/* 
+   ==================================================================================
+   CABEÇALHO E MENU (LAYOUT DESKTOP E BASE)
+   ==================================================================================
+*/
+.header-principal {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-livraria {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+/* Navegação */
+.nav-principal .nav-lista {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo-img:hover {
+    transform: scale(1.08);
+}
+
+/* Layout Principal */
+.conteudo-principal {
+    max-width: 1100px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Cartão do Livro */
+.card-livro {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.livro-header {
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.autor {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.livro-corpo {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.livro-capa-container {
+    flex: 1 1 280px;
+    max-width: 340px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.capa-livro {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.capa-livro:hover {
+    transform: translateY(-4px);
+}
+
+.livro-capa-container figcaption {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+.livro-informacoes {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.preco {
+    font-size: 1.75rem;
+    color: #059669;
+    background-color: #ecfdf5;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.livro-descricao p {
+    text-align: justify;
+}
+
+/* Botão de Adicionar ao Carrinho */
+.btn-carrinho {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+    box-shadow: 0 4px 14px rgba(30, 60, 114, 0.35);
+    transition: all 0.3s ease;
+}
+
+#btn-adicionar {
+    background-color: #1e3c72;
+}
+
+#btn-adicionar:hover {
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.45);
+}
+
+#btn-adicionar:active {
+    transform: translateY(0);
+}
+
+/* Estilos do Carrinho e Contador (Etapa 5) */
+.carrinho-badge-nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.4rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#contador {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.carrinho-secao {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.carrinho-secao h4 {
+    color: #1e3c72;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+.lista-carrinho {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-carrinho li {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-left: 4px solid #059669;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+/* Lista de Destaques */
+.livro-destaques ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.livro-destaques li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+.livro-destaques li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
+/* Seção de Formatos */
+.livro-formatos {
+    margin-top: 1.5rem;
+    border-top: 2px solid #edf2f7;
+    padding-top: 1.5rem;
+    width: 100%;
+}
+
+.grid-formatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.card-formato {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.card-formato:hover {
+    border-color: #1e3c72;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1);
+}
+
+.card-formato h4 {
+    color: #1e3c72;
+    font-size: 1.1rem;
+}
+
+.formato-preco {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 0;
+}
+
+.formato-prazo {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.formato-badge {
+    background-color: #e2e8f0;
+    color: #334155;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: auto;
+}
+
+/* Tabela Comparativa Wrapper Responsivo */
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela-formatos caption {
+    caption-side: bottom;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 0.5rem;
+}
+
+.tabela-formatos th {
+    background-color: #1e3c72;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.tabela-formatos tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+.tabela-formatos tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.tabela-formatos tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Seção de Contato */
+#contato {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #1e3c72;
+}
+
+#contato h2 {
+    color: #1e3c72;
+    margin-bottom: 0.75rem;
+}
+
+#contato a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.rodape-principal {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rodape-principal a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.rodape-principal a:hover {
+    text-decoration: underline;
+}
+
+/* 
+   ==================================================================================
+   RESPONSIVIDADE AJUSTADA - HEADER COMPACTO E BOTÕES LADO A LADO
+   ==================================================================================
+*/
+
+/* Tablets e Telas Médias (<= 850px) */
+@media (max-width: 850px) {
+    .livro-corpo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .livro-capa-container {
+        max-width: 280px;
+    }
+
+    .livro-informacoes {
+        width: 100%;
+    }
+}
+
+/* Dispositivos Móveis (<= 600px): Header Ultracompacto com Botões Lado a Lado */
+@media (max-width: 600px) {
+    .header-principal {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .brand-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-livraria {
+        font-size: 1.25rem;
+    }
+
+    .nav-principal .nav-lista {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: auto;
+        gap: 0.4rem;
+    }
+
+    .nav-principal .nav-link {
+        display: inline-block;
+        width: auto;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.85rem;
+        background-color: rgba(255, 255, 255, 0.18);
+        border-radius: 6px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .conteudo-principal {
+        padding: 0 0.8rem;
+        margin: 1.25rem auto;
+        gap: 1.25rem;
+    }
+
+    .card-livro {
+        padding: 1.25rem 1rem;
+    }
+
+    .livro-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .livro-capa-container {
+        max-width: 240px;
+    }
+
+    .preco {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .btn-carrinho {
+        width: 100%;
+        text-align: center;
+        padding: 0.85rem 1rem;
+    }
+
+    .grid-formatos {
+        grid-template-columns: 1fr;
+    }
+
+    .livro-formatos {
+        overflow-x: auto;
+    }
+
+    .tabela-formatos {
+        min-width: 420px;
+    }
+
+    #contato {
+        padding: 1.25rem 1rem;
+    }
+}
+
+/* Telas Muito Pequenas (<= 380px) */
+@media (max-width: 380px) {
+    .logo-livraria {
+        font-size: 1.15rem;
+    }
+
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-principal .nav-link {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .livro-capa-container {
+        max-width: 200px;
+    }
+}
